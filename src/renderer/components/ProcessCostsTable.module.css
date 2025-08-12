@@ -1,0 +1,131 @@
+.wrapper {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+.scrollArea {
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  color: #333;
+  position: sticky;
+  top: 0;
+  text-align: left;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.procesoRow td {
+  font-weight: bold;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.subtotalRow td {
+  font-weight: bold;
+  background-color: #fdfdfd;
+}
+
+.numeric {
+  text-align: right;
+  font-family: monospace;
+}
+
+.totals {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f7f7f7;
+}
+
+.totals div {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.totalGeneral {
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding-top: 6px;
+  background-color: #f0f0f0;
+}
+
+/* Totales intermedios */
+.totalRow {
+  font-weight: 600;
+  color: #333;
+  background-color: #f8f8f8;
+  border-top: 2px solid #ddd;
+}
+
+.totalRow .numeric {
+  font-weight: bold;
+  color: #0077b6; /* Azul elegante */
+}
+
+/* Total general */
+.totalGeneralRow {
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #e9ecef;
+  border-top: 3px solid #999;
+}
+
+.totalGeneralRow .numeric {
+  color: #d00000; /* Rojo suave para destacar */
+}
+
+.totals { 
+  padding: 10px; 
+  border-top: 1px solid #ddd; 
+  background-color: #f7f7f7; 
+}
+
+.totalsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.totalsTable td {
+  padding: 8px 10px;
+}
+
+.totalsTable td:first-child { color: #444; }
+.totalsTable td:last-child  { width: 1%; white-space: nowrap; }
+
+/* ya tenías estas, las seguimos usando */
+.totalRow {
+  font-weight: 600;
+  color: #333;
+  background-color: #f8f8f8;
+  border-top: 2px solid #ddd;
+}
+.totalRow .numeric {
+  font-weight: 700;
+  color: #0077b6;
+}
+
+.totalGeneralRow {
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #e9ecef;
+  border-top: 3px solid #999;
+}
+.totalGeneralRow .numeric { color: #d00000; }

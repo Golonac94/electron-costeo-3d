@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Tarjeta-clic */
+.card {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  padding: 18px 44px 18px 16px; /* espacio para la flecha a la derecha */
+  text-align: left;
+  background: #fafafa;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .12s ease, background .12s ease;
+  outline: none;
+}
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+}
+.card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(59,130,246,.25);
+}
+
+/* Variantes */
+.cardPrimary {
+  background: #f0fdf4;            /* verde clarito */
+  border-color: #86efac;
+}
+.cardPrimary:hover { background: #dcfce7; }
+
+.cardSecondary {
+  background: #eef2ff;            /* índigo clarito */
+  border-color: #c7d2fe;
+}
+.cardSecondary:hover { background: #e0e7ff; }
+
+/* Texto */
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+.desc {
+  color: #475569;
+  font-size: .95rem;
+}
+
+/* Flecha a la derecha */
+.chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #334155;
+  opacity: .8;
+  pointer-events: none;
+}
+.card:hover .chevron { opacity: 1; }

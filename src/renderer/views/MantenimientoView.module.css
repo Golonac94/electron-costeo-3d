@@ -1,0 +1,81 @@
+.page { display: grid; gap: 16px; }
+
+/* Botón volver (compacto y llamativo) */
+.backBtn { padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: #0f172a; cursor: pointer; }
+.backBtn:hover { background: #f8fafc; }
+.backBtnCompact { padding: 4px 10px; font-size: .85rem; border-radius: 9999px; }
+.backBtnAccent { background: #fff7ed; border-color: #f59e0b; color: #92400e; box-shadow: 0 1px 0 rgba(0,0,0,.02); }
+.backBtnAccent:hover { background: #ffedd5; }
+.backBtnAccent:focus { outline: none; box-shadow: 0 0 0 3px rgba(245,158,11,.25); }
+
+/* Layout: sidebar + contenido */
+.layout {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 250px 1fr;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+/* Sidebar */
+.sidebar {
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #fafafa;
+  overflow: hidden;
+}
+.sidebarHeader {
+  padding: 12px 16px;
+  font-weight: 700;
+  background: #f2f2f2;
+  border-bottom: 1px solid #e5e7eb;
+}
+.nav { display: grid; padding: 8px; gap: 8px; }
+.navItem {
+  text-align: left;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+}
+.navItem:hover { background: #f8fafc; }
+.navItemActive {
+  background: #eef6ff;
+  border-color: #93c5fd;
+  color: #0b5ed7;
+  font-weight: 600;
+}
+
+/* Contenido */
+.content {
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #fafafa;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.contentHeader {
+  padding: 12px 16px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 700;
+}
+.contentBody { padding: 14px 16px; }
+
+/* Utilidades comunes para formularios/tablas dentro */
+.panel {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px;
+}
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.primaryBtn {
+  padding: 8px 12px; border: 0; border-radius: 8px;
+  background: #0ea5e9; color: #fff; cursor: pointer; font-weight: 600;
+}
+.primaryBtn:hover { filter: brightness(1.05); }
