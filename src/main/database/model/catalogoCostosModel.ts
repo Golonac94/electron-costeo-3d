@@ -102,7 +102,7 @@ export async function crearCatalogoCosto(data: Omit<CatalogoCosto, 'id'>): Promi
 }
 
 // Actualizar ítem completo
-export async function actualizarCatalogoCosto(data: CatalogoCosto): Promise<void> {
+export async function actualizarCatalogoCosto(id: string, data: Omit<CatalogoCosto, 'id'>): Promise<void> {
   const db = await getDb();
 
   // (Opcional) validar existencia de unidad/categoría si permites cambiarlas
@@ -116,7 +116,7 @@ export async function actualizarCatalogoCosto(data: CatalogoCosto): Promise<void
     `UPDATE catalogo_costos
      SET nombre = ?, categoria_id = ?, unidad_id = ?, costo_unitario = ?
      WHERE id = ?`,
-    [data.nombre, data.categoria_id, data.unidad_id, data.costo_unitario, data.id]
+    [data.nombre, data.categoria_id, data.unidad_id, data.costo_unitario, id]
   );
 }
 

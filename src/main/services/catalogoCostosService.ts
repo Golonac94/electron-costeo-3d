@@ -18,8 +18,8 @@ export async function crearCatalogoCosto(data: Omit<CatalogoCosto, 'id'>): Promi
 }
 
 // Actualizar un costo existente (solo se puede modificar el valor si es energía)
-export async function actualizarCatalogoCosto(data: CatalogoCosto): Promise<void> {
-  const existente = await catalogoCostosModel.obtenerCatalogoCostoPorId(data.id);
+export async function actualizarCatalogoCosto(id: string, data: Omit<CatalogoCosto, 'id'>): Promise<void> {
+  const existente = await catalogoCostosModel.obtenerCatalogoCostoPorId(id);
   if (!existente) throw new Error('❌ Costo no encontrado.');
 
   const categoria = await categoriasMaterialModel.obtenerCategoriaPorId(existente.categoria_id);
@@ -27,9 +27,9 @@ export async function actualizarCatalogoCosto(data: CatalogoCosto): Promise<void
 
   if (esEnergia) {
     // Solo permitir actualizar el costo_unitario
-    await catalogoCostosModel.actualizarSoloCostoUnitario(data.id, data.costo_unitario);
+    await catalogoCostosModel.actualizarSoloCostoUnitario(id, data.costo_unitario);
   } else {
-    await catalogoCostosModel.actualizarCatalogoCosto(data);
+    await catalogoCostosModel.actualizarCatalogoCosto(id,data);
   }
 }
 

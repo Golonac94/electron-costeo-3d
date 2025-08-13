@@ -5,3 +5,7 @@ export async function listarPorTecnologia(tecId: number | string) {
   // Devuelve: Array<{ id: string; nombre: string; unidad: string }>
 }
 
+export async function obtenerTodosMaterialesBase() {
+  return materialService.obtenerMaterialesBase();
+  // Devuelve: Array<{ id: string; nombre: string; unidad: string }>
+} 

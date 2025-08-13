@@ -22,4 +22,6 @@ contextBridge.exposeInMainWorld('api', {
 
   // Costeo
   calcularCosteo: (payload: any) => ipcRenderer.invoke('costeo:calc', payload),
+
+  
 });
